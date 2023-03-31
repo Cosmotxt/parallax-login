@@ -11,11 +11,10 @@
     <main>
         <div class="background">
             <div id="cena">
-                <div class="layer"><img src="./assets/earth.png"></div>
-                <div class="layer"><img src="./assets/montanha1.png"></div>
-                <div class="layer"><img src="./assets/montanha2.png"></div>
-                <div class="layer"><img src="./assets/moon.png"></div>
-            
+                <div class="layer" data-depth-x="-0.5" data-depth-y="0.25"><img src="./assets/elements/moon.png"></div>          
+                <div class="layer" data-depth-x="0.15"><img src="./assets/elements/mountains02.png"></div>
+                <div class="layer" data-depth-x="0.25"><img src="./assets/elements/mountains01.png"></div>
+                <div class="layer" data-depth-x="-0.25"><img src="./assets/elements/road.png"></div>     
             </div>
         </div>
 
@@ -24,13 +23,11 @@
             <h1>Log In</h1>
             
             <div class="input">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Seu e-mail">
+                <input type="email" name="email" id="email" placeholder="E-mail">
             </div>
 
             <div class="input">
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha" placeholder="Sua senha">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
             </div>
 
             <div class="group">
@@ -54,7 +51,11 @@
         
         </div>
     </main>
-
-    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" integrity="sha512-/6TZODGjYL7M8qb7P6SflJB/nTGE79ed1RfJk3dfm/Ib6JwCT4+tOfrrseEHhxkIhwG8jCl+io6eaiWLS/UX1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        let cena = document.getElementById('cena');
+        let parallax = new Parallax(cena);
+    </script>
 </body>
 </html>
